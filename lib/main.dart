@@ -31,9 +31,16 @@ class MyApp extends StatelessWidget {
       ),
       homeBuilder: (context) => BlocProvider(
         create: (context) => CounterCubit(),
-        child: Mirai.fromAssets(
-          'assets/json/counter.json',
+        child: Mirai.fromNetwork(
+          context: context,
+          request: MiraiNetworkRequest(
+            url:
+                'https://gist.githubusercontent.com/unbam/0f23488351c8df29625ae7765b6eacbf/raw/a7ee68568e7284416e98ab5629c1a00c9cc09979/counter.json',
+            method: Method.get,
+          ),
         ),
+        // assetsからjsonを読み込む場合はこちら
+        // child: Mirai.fromAssets('assets/json/counter.json'),
       ),
     );
   }
