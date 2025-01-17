@@ -1,0 +1,47 @@
+{
+  "type": "scaffold",
+  "appBar": {
+    "type": "appBar",
+    "title": {
+      "type": "text",
+      "data": "Flutter Mirai Demo",
+      "style": {
+        "fontSize": 21
+      }
+    },
+    "backgroundColor": "#D1C4E9"
+  },
+  "body": {
+    "type": "center",
+    "child": {
+       "type": "column",
+        "mainAxisAlignment": "center",
+        "crossAxisAlignment": "center",
+        "children": [
+          {
+            "type": "text",
+            "data": "You have pushed the button this many times:"
+          },
+          {
+            "type": "counter_text",
+            "data": "0",
+            "style": {
+              "fontSize": 34
+            }
+          }
+        ]
+    }
+  },
+  "floatingActionButton": {
+    "type": "floatingActionButton",
+    "backgroundColor": "#D1C4E9",
+    "onPressed": {
+       "actionType": "increment"
+    },
+    "child": {
+      "type": "icon",
+      "iconType": "material",
+      "icon": "add"
+    }
+  }
+}
